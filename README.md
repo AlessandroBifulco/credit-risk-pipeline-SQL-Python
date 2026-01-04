@@ -7,6 +7,13 @@ This solution implements a **Hybrid Architecture**:
 1.  **SQL (SQLite)** is used as a Data Warehouse for robust **ETL** and complex **Feature Engineering** (Joins, Aggregations, Window Functions);
 2.  **Python (Scikit-Learn)** is used for the **Machine Learning Pipeline**, statistical inference, and evaluation.
 
+
+### Data Download
+Due to GitHub's file size limits (>100MB), the dataset is not included in this repository. You must download the source files directly from Kaggle;
+1.  * **Source:** [Home Credit Default Risk - Kaggle Competition](https://www.kaggle.com/c/home-credit-default-risk/data)
+2.  * **Required Files:** `application_train.csv`, `bureau.csv`;
+3.  * **Instruction:** Download these files, unzip them, and place them in the root directory of the project (the same folder where the .py script is located).
+
 ## Business Objective
 * **Goal:** Automate the loan approval process by identifying high-risk applicants.
 * **Impact:** Minimize Non-Performing Loans (NPLs) while maximizing the approval rate for solvable clients.
@@ -57,14 +64,6 @@ The model identified the following behaviors as the strongest predictors:
 1.  **High Risk:** Clients with many **Active Loans** (`ACTIVE_LOANS_COUNT` weight: `+0.60`);
 2.  **High Risk:** Clients with high annual installments (`AMT_ANNUITY`);
 3.  **Low Risk:** Clients with a long credit history (`PAST_LOANS_COUNT` weight: `-0.53`).
-
----
-
-### Data Download
-Due to GitHub's file size limits (>100MB), the dataset is not included in this repository. You must download the source files directly from Kaggle;
-1.  * **Source:** [Home Credit Default Risk - Kaggle Competition](https://www.kaggle.com/c/home-credit-default-risk/data)
-2.  * **Required Files:** `application_train.csv`, `bureau.csv`;
-3.  * **Instruction:** Download these files, unzip them, and place them in the root directory of the project (the same folder where the .py script is located).
 
 ---
 
